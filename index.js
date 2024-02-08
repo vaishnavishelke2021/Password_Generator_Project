@@ -99,9 +99,7 @@ function shufflePassword(array){
     // fisher yates method (to shuffle an array)
     for(let i=(array.length)-1; i>1; i--){
         const j = Math.floor(Math.random()* (i+1));
-        const temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+        array[i], array[j] = array[j], array[i];
     }
     let str = "";
     array.forEach((elm) => (str+=elm));
